@@ -1,12 +1,13 @@
 {
   "name": "@getsieutoc/chat",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "author": {
     "name": "Sang Dang",
     "email": "sang@sieutoc.website"
   },
   "scripts": {
+    "clean": "rimraf --glob **/node_modules **/dist **/.next && pnpm store prune",
     "next-start": "cross-env BROWSER=none next dev",
     "next-build": "next build",
     "tauri": "tauri",
@@ -52,6 +53,7 @@
     "postcss": "8.4.40",
     "postcss-import": "16.1.0",
     "postcss-nesting": "13.0.0",
+    "rimraf": "6.0.1",
     "tailwindcss": "3.4.7",
     "typescript": "5.5.4"
   },
