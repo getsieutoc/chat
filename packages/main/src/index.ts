@@ -1,8 +1,13 @@
-import {app} from 'electron';
 import './security-restrictions';
-import {restoreOrCreateWindow} from '/@/mainWindow.js';
-import {platform} from 'node:process';
+
+import { platform } from 'node:process';
 import updater from 'electron-updater';
+import { app } from 'electron';
+import { sum } from '#common';
+
+import { restoreOrCreateWindow } from './main-window';
+
+console.log('From main package:', sum);
 
 /**
  * Prevent electron from running multiple instances.

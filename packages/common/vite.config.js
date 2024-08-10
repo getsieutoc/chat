@@ -1,7 +1,5 @@
-import { node } from '../../.electron-vendors.cache.json';
 import { join } from 'node:path';
-import { injectAppVersion } from '../../plugins/inject-app-version-plugin.mjs';
-import importCommonPlugin from '../../plugins/import-common-plugin';
+import { chrome } from '../../.electron-vendors.cache.json';
 
 const PACKAGE_ROOT = __dirname;
 const PROJECT_ROOT = join(PACKAGE_ROOT, '../..');
@@ -14,15 +12,10 @@ const config = {
   mode: process.env.MODE,
   root: PACKAGE_ROOT,
   envDir: PROJECT_ROOT,
-  resolve: {
-    alias: {
-      '/@/': join(PACKAGE_ROOT, 'src') + '/',
-    },
-  },
   build: {
     ssr: true,
     sourcemap: 'inline',
-    target: `node${node}`,
+    target: `chrome${chrome}`,
     outDir: 'dist',
     assetsDir: '.',
     minify: process.env.MODE !== 'development',
@@ -38,12 +31,6 @@ const config = {
     emptyOutDir: true,
     reportCompressedSize: false,
   },
-  plugins: [
-    importCommonPlugin({
-      commonEntry: join(PACKAGE_ROOT, '../common/dist/index.js'),
-    }),
-    injectAppVersion(PROJECT_ROOT),
-  ],
 };
 
 export default config;

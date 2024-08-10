@@ -4,8 +4,9 @@
     "node": false
   },
   "extends": [
-    /** @see https://eslint.vuejs.org/rules/ */
-    "plugin:vue/vue3-recommended"
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
@@ -13,8 +14,38 @@
     "sourceType": "module"
   },
   "rules": {
-    /** These rules are disabled because they are incompatible with prettier */
-    "vue/html-self-closing": "off",
-    "vue/singleline-html-element-content-newline": "off"
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-var-requires": "off",
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "warn",
+      "always-multiline"
+    ],
+    "quotes": [
+      "warn",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ]
+  },
+  "plugins": [
+    "react"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "module": "NodeNext",
-    "target": "ESNext",
+    "module": "esnext",
+    "target": "esnext",
     "sourceMap": false,
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Node",
     "skipLibCheck": true,
     "strict": true,
     "isolatedModules": true,
@@ -13,11 +12,7 @@
     ],
     "baseUrl": ".",
     "importsNotUsedAsValues": "error",
-    "paths": {
-      "#common": [
-        "../common/src/index"
-      ]
-    }
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src/**/*.ts",

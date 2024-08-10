@@ -7,21 +7,37 @@
     "skipLibCheck": true,
     "strict": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "types": ["node"],
+    "jsx": "react-jsx",
+    "importsNotUsedAsValues": "error",
+    "types": [
+      "node"
+    ],
     "baseUrl": ".",
     "paths": {
-      "#preload": ["../preload/src/index"],
-      "/@/*": ["./src/*"]
+      "#common": [
+        "../common/src/index"
+      ],
+      "#preload": [
+        "../preload/src/index"
+      ],
+      "/@/*": [
+        "./src/*"
+      ]
     },
-    "lib": ["ESNext", "dom", "dom.iterable"]
+    "lib": [
+      "ESNext",
+      "dom",
+      "dom.iterable"
+    ]
   },
   "include": [
-    "src/**/*.vue",
     "src/**/*.ts",
     "src/**/*.tsx",
     "types/**/*.d.ts",
     "../../types/**/*.d.ts"
   ],
-  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }
