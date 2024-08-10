@@ -18,7 +18,7 @@
     "formatter": {
       "semicolons": "asNeeded",
       "lineEnding": "lf",
-      "trailingComma": "all"
+      "trailingCommas": "all"
     }
   }
 }
