@@ -12,7 +12,7 @@ pub fn init() {
         create_db_file();
     }
 
-    run_migrations();
+    //run_migrations();
 }
 
 pub fn establish_db_connection() -> SqliteConnection {
@@ -52,5 +52,5 @@ fn db_file_exists() -> bool {
 
 fn get_db_path() -> String {
     let home_dir = dirs::home_dir().unwrap();
-    home_dir.to_str().unwrap().to_string() + "/.config/orion/database.sqlite"
+    home_dir.to_str().unwrap().to_string() + "/.config/sieutoc/chat/database.sqlite"
 }

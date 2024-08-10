@@ -1,8 +1,8 @@
 [package]
-name = "app"
+name = "sieutocchat"
 version = "0.0.1"
 authors = ["Sang Dang"]
-default-run = "app"
+default-run = "sieutocchat"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -11,6 +11,7 @@ edition = "2021"
 tauri-build = { version = "2.0.0-rc", features = [] }
 
 [dependencies]
+dirs = "5.0.0"
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 diesel = { version = "2.0.0", features = ["sqlite", "chrono"] }
@@ -26,6 +27,7 @@ tauri-plugin-shell = "2.0.0-rc.0"
 tauri-plugin-os = "2.0.0-rc.0"
 tauri-plugin-http = "2.0.0-rc.0"
 tauri-plugin-clipboard-manager = "2.1.0-beta.7"
+dotenvy = "0.15.7"
 
 [features]
 # by default Tauri runs in production mode

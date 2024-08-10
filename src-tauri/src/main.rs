@@ -3,6 +3,8 @@
     windows_subsystem = "windows"
 )]
 
+mod db;
+
 use std::time::{SystemTime, UNIX_EPOCH};
 
 #[tauri::command]
@@ -17,6 +19,10 @@ fn on_button_clicked() -> String {
 
 fn main() {
     tauri::Builder::default()
+        .setup(|_app| {
+            db::init();
+            Ok(())
+        })
         .plugin(tauri_plugin_clipboard_manager::init())
         .plugin(tauri_plugin_http::init())
         .plugin(tauri_plugin_os::init())
