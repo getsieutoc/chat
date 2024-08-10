@@ -1,7 +1,7 @@
 import { Card } from "@/components/Card"
 import { CardButton } from "@/components/CardButton"
 import { useGlobalShortcut } from "@/hooks/tauri/shortcuts"
-import { invoke } from "@tauri-apps/api/tauri"
+import { invoke } from "@tauri-apps/api/core"
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"

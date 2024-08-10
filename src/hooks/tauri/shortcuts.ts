@@ -3,7 +3,7 @@ import {
   isRegistered,
   register,
   unregister,
-} from "@tauri-apps/api/globalShortcut"
+} from "@tauri-apps/plugin-global-shortcut"
 import { useEffect } from "react"
 
 /**
